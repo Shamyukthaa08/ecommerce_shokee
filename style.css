@@ -1,0 +1,172 @@
+body{
+    background-color:#211C6A ;
+    font-family: 'Arial', sans-serif;
+}
+
+
+nav{
+    background-color: #211C6A;
+    font-size: 20px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+
+   
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    
+    
+}
+.ul{
+    width: 100%;
+   display: flex;
+   justify-content: flex-end;
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.logo a{
+    font-size: 36px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    display: flex;
+    padding-left: 30px;
+    
+}
+
+nav a:hover{
+    color: red;
+}
+.menu-line{
+    height: 3px;
+    width:20px;
+    background-color: white;
+    margin-bottom: 3px;
+}
+.menu{
+cursor: pointer;
+display: none;
+}
+@media all and (max-width:640px){
+nav{
+    flex-direction: column;
+
+}
+nav li{
+    display: block;
+    padding: 10px 0;
+}
+.ul{
+   margin: auto;
+    display: none;
+}
+.logo{
+    align-self: flex;
+    margin:10px 10px 0px 30px;
+
+}
+.menu{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+.showmenu{
+    display: block;
+}
+
+}
+#form {
+    width: 300px;
+    margin:20vh auto 0 auto;
+    padding:20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+#form h1{
+    color:#211C6A;
+    text-align: center;
+}
+#form button{
+    padding:10px;
+    margin-top: 10px;
+    width:100%;
+    color:white;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+}
+#form button:hover{
+    background-color: #fe2d57;
+}
+.input-control{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color:#211C6A;
+}
+.input-control input{
+    border: 2px solid #d3d3d3;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 90%;
+    margin:5px 0;
+}
+.input-control input:focus{
+    outline: 0;
+
+}
+.input-control.success input{
+    border-color:#09c372;
+    
+}
+.input-control.error input{
+    border-color: #ff3860;
+}
+.input-control .error{
+    color: #ff3860;
+}
+.desc{
+    text-align: center;
+}
+.contain{
+    background-color: aliceblue;
+    padding:10px;
+    color:#ff3860;
+    text-align: center;
+}
+.press{
+    font-size:30px;
+    color:aliceblue;
+    padding:0 20px;
+    
+}
+.press:hover{
+    color:red;
+}
+footer{
+    background-color: #211C6A;
+}
+footer p{
+    font-size:12px;
+    color:aliceblue;
+}
+.me{
+    padding:20px;
+    text-align:center;
+    
+    
+}
+.pointer{
+    padding-top:20px;
+}

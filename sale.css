@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+.slider{
+    position: relative;
+    width:90%;
+    margin:auto;
+    overflow: hidden;
+    padding: 30px 0;
+
+}
+.slider img{
+    width:100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.418);
+    color:white;
+    border:none;
+    cursor: pointer;
+}
+.prev{
+    left:0;
+
+}
+.next{
+    right: 0;
+}
+@keyframes fade{
+    from{opacity: .5;}
+    to{opacity: 1;}
+}
+body{
+    margin:0;
+    padding:0;
+    
+}
+nav{
+    background-color: navy;
+    font-size: 20px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+
+   
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    
+    
+}
+.ul{
+    width: 100%;
+   display: flex;
+   justify-content: flex-end;
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.logo a{
+    font-size: 36px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    display: flex;
+    padding-left: 30px;
+    
+}
+
+nav a:hover{
+    color: red;
+}
+.menu-line{
+    height: 3px;
+    width:20px;
+    background-color: white;
+    margin-bottom: 3px;
+}
+.menu{
+cursor: pointer;
+display: none;
+}
+@media all and (max-width:640px){
+nav{
+    flex-direction: column;
+
+}
+nav li{
+    display: block;
+    padding: 10px 0;
+}
+.ul{
+   margin: auto;
+    display: none;
+}
+.logo{
+    align-self: flex;
+    margin:10px 10px 0px 30px;
+
+}
+.menu{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+.showmenu{
+    display: block;
+}
+
+}
+.products{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:30px;
+   
+}
+.feature1{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    line-height: 1.8rem;
+    
+}
+.feature1 h4{
+    color: navy;
+}
+.feature1 p{
+    color:rgb(134, 134, 134);
+}
+.feature1 button{
+    background-color: rgb(255, 17, 17);
+    padding: 10px;
+    display: flex;
+    float: right;
+    border:none;
+    border-radius: 20px;
+    color: aliceblue;
+    align-self: center;
+    margin-top:-20px;
+    
+}
+.feature1 img:hover{
+    opacity: 0.5;
+}
+.heading2{
+    padding-top:70px;
+    padding-bottom: 20px;
+}
+.heading2 h3{
+    text-align: center;
+    font-size:70px;
+    color:red;
+}
+
+
+
+
+.press{
+    font-size:30px;
+    color:aliceblue;
+    padding:0 20px;
+    
+}
+.press:hover{
+    color:red;
+}
+footer{
+    background-color: #211C6A;
+}
+footer p{
+    font-size:12px;
+    color:aliceblue;
+}
+.me{
+    padding:20px;
+    text-align:center;
+    
+    
+}
+.pointer{
+    padding-top:20px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="">S.H.O.K.E.E</a>
+        </div>
+        <div class="ul">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mens.html">Men's</a></li>
+            <li><a href="women.html">Women's</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="signup.html">Sign-up</a></li>
+        </ul>
+        </div>
+        <div class="hi">
+        <div class="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <form id="form" action="/">
+        <h1>Sign-in</h1>
+        <div class="input-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <div class="error"></div>
+        </div>
+        <button type="submit">Login</button>
+        <p class="desc">Don't have an account?<a href="signup.html">Sign-up</a></p>
+    </div>
+    </form>
+   
+    
+
+    
+    <script>
+        const email=document.getElementById('email');
+        const password=document.getElementById('password');
+        let ans;
+        form.addEventListener('submit', e =>{
+        e.preventDefault();
+
+        validateInputs();
+});
+const setError=(element, message)=>{
+    const inputControl= element.parentElement;
+    const errorDisplay=inputControl.querySelector('.error');
+
+    errorDisplay.innerText= message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+};
+const setSuccess= element => {
+    const inputControl= element.parentElement;
+    const errorDisplay=inputControl.querySelector('.error');
+
+    errorDisplay.innerText= '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('errors');
+};
+const isValidEmail = email =>{
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+const validateInputs = () =>{
+    const emailValue=email.value.trim();
+    const passwordValue=password.value.trim();
+    
+    if(emailValue===''){
+        setError(email, 'Email is required');
+        ans=false;
+        
+    }else if(!isValidEmail(emailValue)){
+        setError(email, 'Provide a valid email address');
+      ans=false;
+    }
+    else {
+        setSuccess(email);
+       ans=true;
+    }
+    if(passwordValue === ''){
+        setError(password, 'Password is required');
+        ans=false;
+      
+    }else if(passwordValue.length<8){
+        setError(password, 'Password must be at least 8 character.');
+        and=false;
+       
+    }
+    else{
+        setSuccess(password);
+        ans=true;
+       
+    }
+    if(ans){
+        window.location.href="https://shamyukthaa08.github.io/OIBSIP_calculator.githubio/"
+    }
+
+}
+
+    const menu= document.querySelector('.menu')
+    const menuList=document.querySelector('nav .ul')
+    menu.addEventListener('click', ()=>{
+        menuList.classList.toggle('showmenu')
+    })
+
+
+    </script>
+</body>
+</html>
